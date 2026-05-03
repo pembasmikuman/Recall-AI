@@ -17,7 +17,7 @@ export async function GET(
   const { data: questions, error } = await supabase
     .from('questions')
     .select('*')
-    .eq('quiz_id', params.id)
+    .eq('quiz_id', id)
 
   if (error) {
     console.error('Fetch questions error:', error)
